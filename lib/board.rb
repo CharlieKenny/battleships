@@ -9,11 +9,21 @@ class Board
 	#attr_writer (:player1 :player2)
 	attr_reader :size
 
-	def initialize(coordinates)
-		@size = coordinates
+	def initialize(grid_size)
+		@size = grid_size
+		@sea = []
 		#@player1 = []
 		#@player2 = []
 	end
+
+	def boat_placement ship
+
+		player = {ship.name => ship.coordinates}
+
+		@sea.push player
+
+	end
+end
 
 	# def place(ship)
 
@@ -24,4 +34,3 @@ class Board
 	# end
 
 	# end
-end
