@@ -1,7 +1,7 @@
 class Ship
 
-	attr_writer :coordinates
-	attr_writer :name
+	attr_accessor :coordinates
+	attr_accessor :name
 
 	def initialize(coordinates, name)
 		@coordinates = coordinates
